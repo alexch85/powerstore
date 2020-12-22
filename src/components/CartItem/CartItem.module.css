@@ -1,0 +1,163 @@
+.CartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    width: 700px;
+    padding:10px;
+}
+.CartItemRed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    width: 700px;
+    padding:  10px;
+    background: rgb(241, 206, 206);
+    border-radius: 3px;
+    opacity: 0.5;
+    animation: fade-out 0.3s linear;
+}
+
+.CartItem img{
+    margin: 0 10px;
+    width: 120px;
+    height: 120px;
+}
+
+.CartItemRed img{
+    margin: 0 10px;
+    width: 120px;
+    height: 120px;
+    background: red;
+    opacity: 0.5;
+    animation: fade-out 0.3s none;
+}
+
+.QuantPrice {
+    margin-left: auto;
+    display: flex;
+    width: 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CartItemCheckout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 7px;
+}
+
+.CartItemCheckoutRed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    width: calc(1080 - 40%);
+    padding: 7px;
+    background: rgb(241, 206, 206);
+    border-radius: 3px;
+    opacity: 0.5;
+    animation: fade-out 0.3s linear;
+}
+
+.CartItemCheckout img {
+    margin: 0 10px;
+}
+
+.CartItemCheckoutRed img {
+    margin: 0 10px;
+    background: red;
+    opacity: 0.5;
+    animation: fade-out 0.3s none;
+}
+
+.QuantPriceCheckout {
+    margin-left: auto;
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ClosedIcon:focus,
+.ClosedIcon:hover {
+    color: crimson;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1280px) {
+    .CartItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #cccccc;
+        width: 100%;
+        margin: 0;;
+        box-sizing: border-box;
+        font-size: 0.8em;
+    }
+
+    .CartItemRed {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #cccccc;
+        width: 100%;
+        padding: 10px;
+        margin: 0 5px;
+        box-sizing: border-box;
+        font-size: 0.8em;
+        background: rgb(241, 206, 206);
+        border-radius: 3px;
+        opacity: 0.5;
+        animation: fade-out 0.3s linear;
+    }
+    
+    .CartItem p {
+        font-weight: bold;
+        width: 90px;
+        margin-right: 10px;
+    }
+
+    .CartItem img {
+        margin: 0 10px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .CartItemRed img {
+        margin: 0 10px;
+        width: 60px;
+        height: 60px;
+        background: red;
+        opacity: 0.5;
+        animation: fade-out 0.3s none;
+    }
+
+    .QuantPrice {
+        width: 140px;
+        margin-left: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .QuantPrice h3 {
+        padding: 0;
+        margin: 0;
+    }
+    
+}
+@keyframes fade-out {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0.5;
+    }
+}

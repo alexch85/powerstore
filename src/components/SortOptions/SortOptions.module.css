@@ -1,0 +1,14 @@
+.SortOptions {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-weight: 500;
+    margin:10px 10px 0 0 ;
+    min-width: 300px;
+}
+
+.SortOptions select {
+    margin: 0 0 5px 5px;
+}

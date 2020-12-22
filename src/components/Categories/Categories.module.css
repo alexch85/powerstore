@@ -1,0 +1,21 @@
+.Categories{
+    max-width: 1080px;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .Categories{
+      justify-content: center;
+    }
+  }
+
+@media (max-width: 768px) {
+    .Categories{
+        justify-content: center;
+    }
+}
+
+

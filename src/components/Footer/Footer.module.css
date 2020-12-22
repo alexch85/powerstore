@@ -1,0 +1,26 @@
+.FooterContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 80px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.BottomFooter {
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    background-color: #535151;
+}
+
+@media (max-width: 1280px) {
+    /* .FooterContainer {
+        position: relative;
+    } */
+    .BottomFooter p{
+        padding: 0 10px;
+        font-size: 0.8em;
+    }
+}

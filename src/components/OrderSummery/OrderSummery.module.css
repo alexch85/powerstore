@@ -1,0 +1,58 @@
+.OrderSummery {
+    width: 220px;
+    min-height: 260px;
+    display: flex;
+    flex-flow: column nowrap;
+    /* align-items: center; */
+    background: #cccccc;
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+.OrderSummery h3 {
+    margin: 10px;
+}
+
+.OrderTotals {
+    background: white;;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-self: stretch;
+}
+
+.OrderTotalsField {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    
+}
+
+.OrderTotals h4,
+.OrderTotals h5 {
+    margin: 5px;
+}
+
+@media(max-width: 1280px) {
+    .OrderSummery {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px) {
+    .OrderSummery {
+        width: 95%;
+        display: flex;
+        flex-flow: column nowrap;
+        background: #cccccc;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 20px 10px 10px;
+    }
+    .OrderSummery button {
+        align-self: stretch;
+        width: 100%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,27 @@
+.PageTitle {
+    width: inherit;
+    color: #2e2e2e;
+    border-bottom: 1px solid #cccccc;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.PageTitle a,
+.PageTitle a:active,
+.PageTitle a:focus {
+    list-style: none;
+    text-decoration: none;
+    color: #2e2e2e;
+}
+.PageTitle a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+    .PageTitle{
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+    }
+}

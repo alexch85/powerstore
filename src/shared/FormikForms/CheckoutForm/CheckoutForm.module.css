@@ -1,0 +1,154 @@
+.CheckoutForm {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    padding-left: 50px;
+}
+ .CheckoutForm form {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.CheckoutField {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.CheckoutField input {
+     width: 100%;
+     box-sizing: border-box;
+     outline: none;
+     border: 1px solid #ccc;
+     background-color: white;
+     font-family: inherit;
+     padding: 6px 5px;
+     display: block;
+     width: 293px;
+     height: 35px;
+     color: #363636;
+     height: 35px;
+ }
+
+ .CheckoutField select {
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-family: inherit;
+    padding: 6px 5px;
+    display: block;
+    width: 293px;
+    height: 35px;
+    color: #363636;
+    height: 35px;
+}
+
+.CheckoutField input:focus,
+.CheckoutField select:focus {
+  background-color: #f5f1f1;
+  border: 2px solid #cccccc;
+}
+
+.CheckoutForm button {
+    margin-top: 20px;
+}
+
+.CheckoutForm p {
+    padding: 0;
+    margin: 2px;
+    color: crimson;
+    font-size: 0.7em;
+}
+
+
+@media (max-width: 1280px) {
+    .CheckoutForm {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        justify-content: stretch;
+        padding: 10px;
+    }
+    .CheckoutForm form {
+        width: 70%;
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 10px;
+        align-self: center;
+    }
+    
+    .CheckoutField input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .CheckoutField select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .DeliverySelect {
+        width: 100%;
+        box-sizing: border-box;
+    }
+        
+    .CheckoutForm h3 {
+            margin: 10px 0;
+    }
+    .CheckoutForm button {
+        width: 50%;
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+.CheckoutForm {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        justify-content: stretch;
+        padding: 10px;
+    }
+    .CheckoutForm form {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        justify-content: stretch;
+        padding: 10px;
+        align-self: center;
+    }
+
+    
+.CheckoutField input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+   
+.CheckoutField select {
+       width: 100%;
+       box-sizing: border-box;
+   }
+.CheckoutField > h3 {
+    text-align: center;
+}
+
+.DeliverySelect {
+       width: 100%;
+       box-sizing: border-box;
+    }
+    
+.CheckoutForm h3 {
+        margin: 10px 0;
+    }
+}
+.CheckoutForm button {
+    width: 100%;
+}
+
+

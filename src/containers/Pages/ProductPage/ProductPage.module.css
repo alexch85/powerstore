@@ -1,0 +1,120 @@
+.ProductPage {
+    max-width: 1160px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 75px auto 0;
+}
+
+.PageContent {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 10px;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 20px;
+}
+
+.PageContent p {
+    max-width: 400px;
+}
+
+.PriceOrder {
+    margin-left: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.PriceOrder h2 {
+    align-self: flex-end;
+}
+
+.QuantCount{
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.ProductPage img {
+    width: 400px;
+    height: 400px;
+    margin-right: 20px;
+}
+
+.infoQuantity {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+@media (max-width: 1280px) {
+    .ProductPage {
+        max-width: 100%;
+    }
+    .PageContent {
+        padding: 0 20px 20px;
+    }
+}
+
+
+@media (max-width: 568px) {
+    .ProductPage {
+        width: 100%;
+    }
+    .PageContent {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 20px;
+        border-bottom: none;
+        padding-bottom: 20px;
+        padding: 0 10px ;
+        margin-bottom: 0;
+        align-self: center;
+    }
+    
+    .infoQuantity {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    
+    .PageContent p {
+        max-width: 320px;
+    }
+
+    .QuantCount{
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+        align-self: flex-start;
+    }
+    
+    .PriceOrder {
+        margin: 0 ;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .PriceOrder h2 {
+        margin-bottom: 10px;
+    }
+
+    .PriceOrder > button {
+        align-self: stretch;
+
+    }
+
+    .ProductPage img {
+        margin-right: 0;
+        max-width: 320px;
+        max-height: 320px;
+        align-self: center;
+    }
+
+}
+
+
+  

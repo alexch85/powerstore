@@ -1,0 +1,63 @@
+.NavigationItems {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 580px;
+    color: white;
+}
+
+.NavigationItems a {
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+}
+
+.NavigationItemsSide {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin: 0 auto;
+}
+
+
+.NavigationItemsSide a {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+
+.NavigationItemsSide img {
+    margin-bottom: 30px;
+}
+
+
+.SitePages {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    list-style: none;
+}
+
+.SitePagesSide {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 1.3em;
+    padding:20px 0;
+    font-size: 1.2em;
+    height: 100%;
+}
+
+.SocialMIcons {
+    margin-top: 20px;
+}
+
+
+
+
+

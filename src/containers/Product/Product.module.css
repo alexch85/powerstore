@@ -1,0 +1,173 @@
+.ProdContainer {
+    width: 210px;
+    height: 320px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: 10px 0 10px 10px;
+    z-index: 0;
+    border: 1px solid #cccccc;
+    padding: 7px 7px 12px 7px;
+    box-shadow: 0px 0px 66px -39px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.FeaturedProdContainer {
+    width: 240px;
+    height: 360px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: 5px;
+    border: 1px solid #cccccc;
+    padding: 7px;
+    box-shadow: 0px 0px 66px -39px rgba(0,0,0,0.25);
+}
+
+
+.ProdContainer img {
+    width: inherit;
+    height: 210px;
+}
+
+.FeaturedProdContainer img {
+    width: inherit;
+    height: 250px;
+}
+
+.ProdContainer p {
+    size: 1rem;
+    margin: 0;
+    max-width: 140px;
+    font-weight: 500;
+}
+
+.FeaturedProdContainer p {
+    size: 1rem;
+    margin: 0;
+    max-width: 140px;
+    font-weight: 500;
+}
+
+.TextContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.Price {
+    color: rgb(226, 55, 55);
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.HoverFocus {
+    width: inherit;
+    height: 210px;
+    position: relative;
+    margin: 0;
+}
+
+.FeaturedProdContainer > .HoverFocus {
+    width: inherit;
+    height: 250px;
+    position: relative;
+    margin: 0;
+}
+
+.FeaturedProdContainer > .HoverFocus img {
+    width: inherit;
+    height: 250px;
+}
+
+.HoverFocus button {
+    position: absolute;
+    top: calc(38% + 10px);
+    left: 38%;
+    margin: 0;
+    background: none;
+    color: white;
+    font-size: 2.4rem;
+    border: none;
+    outline: none;
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.HoverFocus:hover,
+.HoverFocus button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+    .ProdContainer {
+        margin: 5px 5px 10px 5px;
+        width: 220px;
+    }
+
+    .FeaturedProdContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 145px;
+        height: 260px;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    .FeaturedProdContainer img {
+        width: inherit;
+        height: 150px;
+    }
+    .FeaturedProdContainer > .HoverFocus {
+        width: inherit;
+        height: 150px;
+        position: relative;
+        margin: 0;
+    }
+    .FeaturedProdContainer > .HoverFocus img {
+        width: inherit;
+        height: 150px;
+    }
+    .FeaturedProdContainer p {
+        font-size: 0.9rem;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .TextContainer {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+        margin-bottom: 5px;
+        height: 70px;
+    } 
+}
+
+@media (max-width: 355px) {
+    .FeaturedProdContainer {
+        width: 200px;
+    }
+    .FeaturedProdContainer img {
+        width: 145px;
+        height: 150px;
+        align-self: center;
+    }
+    .FeaturedProdContainer > .HoverFocus img {
+        width: 145px;
+        height: 150px;
+    }
+}
+
+@keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
+    }
+  }

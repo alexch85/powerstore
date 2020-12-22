@@ -1,0 +1,149 @@
+header {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: #131616;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+}
+
+.headerContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 0 auto;
+    width: 1160px;
+    padding: 0 10px;
+}
+
+.UserItems {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    list-style: none;
+    margin-right: 30px;
+    width: 200px;
+    color: white;
+}
+
+.UserItems a {
+    color: white;
+}
+
+.loginReg {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 0.9em;
+    color: white;
+    margin-right: 20px;
+}
+.loginReg button {
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 0.9em;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    height: 30px;
+    padding: 0;
+}
+
+.loginReg button:hover,
+.loginReg button:focus,
+.loginReg button.active {
+    color: #ef2d2d;
+    cursor: pointer;
+}
+
+.DropdownMenu {
+    position: absolute;
+    top: 30px;
+    left: -35px;
+    background: #131616;
+    border: 1px solid #cccccc;
+    z-index: 1000;
+}
+
+.DropdownMenu ul {
+    list-style: none;
+    width: 100px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.DropdownMenu li {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.DropdownMenu li + li {
+    border-top: 1px solid #cccccc;
+}
+.DropdownMenu a {
+    text-decoration: none;
+}
+button a {
+    text-decoration: none;
+}
+
+
+@media (max-width: 1280px) {
+    header {
+        padding: 0;       
+    }
+    /* nav {
+        display: none;
+    } */
+    header { 
+        height: 60px;
+    }
+    .headerContainer{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin: 0;
+        width: 95%;
+        padding: 0 20px ;
+        font-size: 0.9em;
+    }
+    .SocialM{
+        display: none;
+    }
+    .loginReg {
+        padding: 0;
+    }
+    .UserItems {
+        margin-right:0 ;
+        width: 160px;
+    }
+    .loginReg button:hover,
+    .loginReg button:focus,
+    .loginReg button.active {
+    color: white;
+    }
+    .DesktopOnly {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .DesktopOnly {
+        display: none;
+    }
+    .headerContainer {
+        width: 90%;
+    }
+}

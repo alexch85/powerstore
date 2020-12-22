@@ -1,0 +1,70 @@
+.AuthModal{
+    color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    margin: 10px 0 50px;
+
+}
+
+.AuthModal form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-bottom: 10px;
+    min-height: 240px;
+}
+
+.AuthModal h2{
+    margin: 0;
+    padding: 0;
+}
+
+.AuthModal label {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.AuthModal input {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.AuthModal p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.AuthModal button {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+}
+
+.AuthModal a:hover {
+    cursor: pointer;
+}
+
+.AuthModal a {
+    color: rgb(80, 152, 197);
+    text-decoration: underline;
+}
+
+.ErrorMessage {
+    height: 12px;    
+}
+.ErrorMessage p {
+    color: crimson;
+    font-size: 0.8em;
+}
+
+.FormsContainer {
+    margin-bottom: 10px;
+}

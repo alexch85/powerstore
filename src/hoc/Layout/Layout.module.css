@@ -1,0 +1,14 @@
+.ThanksModal  {
+   display: flex;
+   flex-flow: column;
+}
+
+.CloseIcon {
+   align-self: flex-end;
+}
+
+.CloseIcon:hover,
+.CloseIcon:focus {
+    cursor: pointer;
+    color: rgb(80, 152, 197);
+}

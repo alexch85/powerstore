@@ -1,0 +1,29 @@
+.QuantityCounter {
+    display: flex;
+    align-items: stretch;
+    margin-right: 5px;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.QuantityCounter button {
+    background: #2e2e2e;
+    color: white;
+    border: none;
+    outline: none;
+    padding: auto;
+}
+
+.QuantityCounter button:hover {
+    background: #cccccc;
+    cursor: pointer;
+}
+
+.QuantityNum {
+    min-width: 18px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    padding: 0 7px;
+}

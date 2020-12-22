@@ -1,0 +1,37 @@
+.Modal {
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    width: 340px ;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    top:  15em;
+    left: calc(50% - 170px);;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+@media(max-width: 768px) {
+    .Modal{
+        width: 280px;
+        top:  60px;
+        left: calc(50% - 140px);  
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  

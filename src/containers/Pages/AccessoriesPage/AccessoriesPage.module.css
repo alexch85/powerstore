@@ -1,0 +1,22 @@
+.ProductCategory {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+.PageContent {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top:10px;
+}
+
+.Products {
+    display: grid;
+    grid-template-areas: 
+    'product product product product'
+    'product product product product' ;
+    row-gap: 20px;
+    column-gap: 10px;
+    margin-left: auto;
+    border-left: 1px solid #cccccc;
+    padding-left: 40px;
+}

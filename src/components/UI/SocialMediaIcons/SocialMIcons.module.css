@@ -1,0 +1,23 @@
+.SocialMIcons {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+
+.SocialMIcons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.8em;
+}
+
+.SocialMIcons a:hover {
+    color: #cccccc;
+    cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+    .SocialMIcons a {
+        color: #333333;
+    }
+}

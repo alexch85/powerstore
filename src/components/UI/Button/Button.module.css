@@ -1,0 +1,54 @@
+.RegularButton {
+    padding: 7px 12px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #363636;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+
+.RegularButton:disabled:hover {
+    background-color: #363636;
+    cursor: not-allowed;
+}
+
+.ActionButton {
+    padding: 7px 12px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 2px;
+    background-color: #00a450;
+    border: none;
+    outline: none;
+}
+
+.RegularButton:hover{
+    cursor: pointer;
+    background: #00a450;
+}
+.ActionButton:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+    .ActionButton{
+        font-size: 0.8em;
+        font-weight: 500;
+        padding: 8px 12px;
+    }
+    .RegularButton {
+        font-size: 0.8em;
+        font-weight: 500;
+        padding: 8px 12px;
+    }
+    .RegularButton:hover{
+        background: #363636;
+    }
+}

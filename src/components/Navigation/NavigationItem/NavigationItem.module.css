@@ -1,0 +1,37 @@
+
+.NavigationItem {
+    color: white;
+    letter-spacing: 0.02em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    margin: 0 15px;
+    letter-spacing: 0.04em;
+    font-size: 0.9em;
+    list-style: none;
+    text-decoration: none;
+    flex-shrink: 1;
+}
+
+.NavigationItem a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.NavigationItem a:hover {
+    color: #ccc;
+    border-bottom: 2px solid #ef2d2d;
+}
+
+
+
+.NavigationItem a:focus,
+.NavigationItem a.active{
+    list-style: none;
+}
+
+@media (max-width: 1280px) {
+    .NavigationItem {
+      margin: 5px 0;
+      padding: 2px;
+    }
+}

@@ -1,0 +1,31 @@
+.SectionTitle {
+    width: 180px;
+    background-color: #ef2d2d;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+}
+
+.SectionContainer {
+    width: 1080px;
+    border-bottom: 1px solid #cccccc;
+    align-self: center;
+    margin: 50px 0 20px 0 ;
+}
+
+@media (max-width: 1280px) {
+    .SectionTitle {
+        width: 130px;
+        font-size: 0.8em;
+    }
+    .SectionContainer {
+        margin: 20px 0 20px 0;
+    }
+}

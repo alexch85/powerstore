@@ -1,0 +1,132 @@
+.AboutContact {
+    max-width: 1160px;
+    margin: 75px auto 0;
+}
+
+.PageContent {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1160px;
+}
+
+.About {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.About p {
+    width: 450px;
+}
+
+.About img {
+    align-self: flex-start;
+}
+
+.Contact {
+    margin: 10px 0 0 40px;
+    padding-left: 40px;
+    width: 400px;
+    height: inherit;
+    display: flex;
+    flex-flow: column nowrap;
+    border-left:1px solid #cccccc ;
+}
+
+.Contact h2 {
+    margin: 0 0 15px 0;
+}
+
+.Contact button {
+    align-self: flex-start;
+}
+
+
+@media (max-width: 1280px) {
+    .AboutContact {
+        width: 100%;
+    }
+    .PageContent {
+        display: flex;
+        flex-flow: column nowrap;
+        margin:  0;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .About p {
+        width: 80%;
+        padding:  0 0 0 5px;
+        font-size: 1em;
+        align-self: center;
+    }
+    
+    .About img {
+        align-self: center;
+        width: 80%;
+    }
+    .Contact {
+        margin: 10px 0 0 0px;
+        width: 80%;
+        height: inherit;
+        display: flex;
+        flex-flow: column wrap;
+        border-left: none;
+        padding-left: 0;
+        justify-content: stretch;
+        align-self: center;
+    }
+
+
+     .Contactform textarea{
+         width: 100%;
+         box-sizing: border-box;
+    }
+
+    .Contact  h2 {
+        align-self: center;
+    }
+
+    .Contact button {
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+ 
+}
+
+@media (max-width: 768px) {
+    .About img {
+        align-self: center;
+        width: 80%;
+    }
+    .About p {
+        padding:  0 0 0 5px;
+        font-size: 1em;
+        width: 80%;
+        align-self: center;
+    }
+    .Contact {
+        margin: 10px 0 0 0px;
+        width: 80%;
+        height: inherit;
+        display: flex;
+        flex-flow: column wrap;
+        border-left: none;
+        padding-left: 0;
+        justify-content: stretch;
+    }
+}
+
+@media (max-width: 568px) {
+    .About img {
+        align-self: center;
+        width: 100%;
+    }
+    .About p {
+        width: 100%;
+    }
+    .Contact {
+        width: 100%;
+  
+    }
+}

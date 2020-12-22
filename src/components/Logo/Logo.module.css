@@ -1,0 +1,29 @@
+.LogoSmall img{
+    width: 160px;
+    height: 42px;
+}
+
+.LogoBig img{
+    width: 560px;
+    height: 150px;
+}
+
+@media (max-width: 1280px) {
+    .LogoBig img{
+        width: 320px;
+        height: 84px;
+    }
+    .LogoSmall img{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .LogoBig img{
+        width: 160px;
+        height: 42px;
+    }
+    .LogoSmall img{
+        display: none;
+    }
+}

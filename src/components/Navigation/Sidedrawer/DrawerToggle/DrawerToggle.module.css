@@ -1,9 +1,9 @@
 .DrawerToggle {
 	width: 40px;
-	height: 25px;
+	height: 23px;
 	display: flex;
 	flex-flow: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	box-sizing: border-box;
 	cursor: pointer;

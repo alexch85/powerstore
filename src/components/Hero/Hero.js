@@ -9,7 +9,7 @@ const Hero = (props) => {
 		<div className={styles.Hero}>
 			<div className={styles.HeroItems}>
 				<Logo />
-				<Link to='/Barbells'>
+				<Link to='/Barbells' className={styles.CtaBtn}>
 					<Button type='action'>shop barbells now</Button>{' '}
 				</Link>
 			</div>

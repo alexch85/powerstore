@@ -13,21 +13,18 @@
 
 .HeroItems {
 	display: flex;
-	flex-flow: column nowrap;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	height: 120px;
-	margin-bottom: calc(220px - 110px);
+}
+
+.CtaBtn {
+	margin-top: 20px;
 }
 
 @media (max-width: 1280px) {
 	.Hero {
 		margin-top: 60px;
 		height: 400px;
-	}
-	.HeroItems {
-		height: 150px;
-		margin-bottom: calc(150px - 75px);
 	}
 }
 
@@ -40,6 +37,5 @@
 	}
 	.HeroItems {
 		height: 90px;
-		margin-bottom: 20px;
 	}
 }

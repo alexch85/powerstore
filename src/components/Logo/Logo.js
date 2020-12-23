@@ -7,7 +7,7 @@ const logo = (props) => {
 	let logo = (
 		<div className={styles.LogoBig}>
 			<img src='/images/logo.png' alt='Powerstore Logo' />
-			<h2>Strength training equipment provider since 1998</h2>
+			<h2>Strength equipment provider since 1998</h2>
 		</div>
 	);
 

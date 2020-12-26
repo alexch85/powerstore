@@ -143,6 +143,9 @@
 		margin-bottom: 5px;
 		height: 70px;
 	}
+	.Price {
+		margin-top: 5px;
+	}
 }
 
 @media (max-width: 355px) {
@@ -157,6 +160,9 @@
 	.FeaturedProdContainer > .HoverFocus img {
 		width: 145px;
 		height: 150px;
+	}
+	.Price {
+		margin-top: 5px;
 	}
 }
 

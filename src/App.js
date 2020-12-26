@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component, Suspense } from 'react';
+
 import styles from './App.module.css';
 
 import Layout from './hoc/Layout/Layout';
@@ -7,21 +8,24 @@ import { Route, Switch,  withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './store/actions/index';
 
-
-import Homepage from './containers/Pages/Hompage/Homepage';
-import Accessories from './components/Categories/Accessories/Accessories';
-import Barbells from './components/Categories/Barbells/Barbells';
-import AboutContact from './containers/Pages/AboutContact/AboutContact';
-import Appearel from './components/Categories/Appearel/Appearel';
-import Plates from './components/Categories/Plates/Plates';
-import ProductPage from './containers/Pages/ProductPage/ProductPage';
-import CartPage from './containers/Pages/CartPage/CartPage';
-import Checkout from './containers/Pages/Checkout/Checkout';
-import OrdersPage from './containers/Pages/OrdersPage/OrdersPage';
-import Logout from './containers/Auth/Logout';
 import Spinner from './components/UI/Spinner/Spinner';
 
+//Lazy loading
+const homePage = React.lazy(()=> import('./containers/Pages/Hompage/Homepage'))
+const accessories = React.lazy(()=> import('./components/Categories/Accessories/Accessories'))
+const barbells = React.lazy(()=> import('./components/Categories/Barbells/Barbells'))
+const appearel = React.lazy(()=> import('./components/Categories/Appearel/Appearel'))
+const plates = React.lazy(()=> import('./components/Categories/Plates/Plates'))
+const aboutContact = React.lazy(()=> import('./containers/Pages/AboutContact/AboutContact'))
+const productPage = React.lazy(()=> import('./containers/Pages/ProductPage/ProductPage'))
+const cartPage = React.lazy(()=> import('./containers/Pages/CartPage/CartPage'))
+const checkout = React.lazy(()=> import('./containers/Pages/Checkout/Checkout'))
+const ordersPage = React.lazy(()=> import('./containers/Pages/OrdersPage/OrdersPage'))
+const logout = React.lazy(()=> import('./containers/Auth/Logout'))
+
 class App extends Component {
+
+  
   componentDidMount() {
     this.props.onTryAutoSignup()  
     this.props.onInitProducts()
@@ -29,34 +33,40 @@ class App extends Component {
 
   render() {
     let routes = (
+      <Suspense fallback='loading...'>
       <Switch>
-        <Route path="/AboutContact" component={AboutContact}/>
-        <Route path="/Accessories" component={Accessories}/>
-        <Route path="/Barbells" component={Barbells}/>
-        <Route path="/Plates" component={Plates} />
-        <Route path="/Appearel" component={Appearel}/>
-        <Route path="/Cart" component={CartPage}/>
-        <Route path="/:id" component={ProductPage} />
-        <Route path="/" exact component={Homepage} />
+        <Route path="/AboutContact" component={aboutContact}/>
+        <Route path="/Accessories" component={accessories}/>
+        <Route path="/Barbells" component={barbells}/>
+        <Route path="/Plates" component={plates} />
+        <Route path="/Appearel" component={appearel}/>
+        <Route path="/Cart" component={cartPage}/>
+        <Route path="/:id" component={productPage} />
+        <Route path="/" exact component={homePage} />
         <Redirect to="/"/>
       </Switch>
+
+      </Suspense>
     )
     if (this.props.isAuthenticated) {
       routes = (
+        <Suspense fallback='loading...'>
+
         <Switch>
-          <Route path="/AboutContact" component={AboutContact}/>
-          <Route path="/Accessories" component={Accessories}/>
-          <Route path="/Barbells" component={Barbells}/>
-          <Route path="/Plates" component={Plates} />
-          <Route path="/Appearel" component={Appearel}/>
-          <Route path="/Cart" component={CartPage}/>
-          <Route path="/Checkout" component={Checkout} />
-          <Route path="/Orders" component={OrdersPage}/>
-          <Route path="/Logout" component={Logout} />
-          <Route path="/:id" component={ProductPage} />
-          <Route path="/" exact render={(props)=> props.loading ?<Spinner/> :<Homepage/>} />
+          <Route path="/AboutContact" component={aboutContact}/>
+          <Route path="/Accessories" component={accessories}/>
+          <Route path="/Barbells" component={barbells}/>
+          <Route path="/Plates" component={plates} />
+          <Route path="/Appearel" component={appearel}/>
+          <Route path="/Cart" component={cartPage}/>
+          <Route path="/Checkout" component={checkout} />
+          <Route path="/Orders" component={ordersPage}/>
+          <Route path="/Logout" component={logout} />
+          <Route path="/:id" component={productPage} />
+          <Route path="/" exact render={(props)=> props.loading ?<Spinner/> : homePage} />
           <Redirect to="/"/>
         </Switch>
+        </Suspense>
       )
     }
     return (

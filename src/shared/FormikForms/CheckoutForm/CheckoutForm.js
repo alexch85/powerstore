@@ -7,7 +7,6 @@ import * as actions from '../../../store/actions/index';
 import { withFormik, Form, Field} from 'formik';
 import * as yup from 'yup';
 
-
 import Button from '../../../components/UI/Button/Button';
 import axios from 'axios';
 
@@ -359,22 +358,6 @@ const FormikForm = withFormik({
         .catch(err => {
             console.log('Something went wrong!')
         })
-        
-        //SEND PRODUCTS DATA TO THE SERVER METHOD:
-        
-        // props.products.forEach(product => {
-        //     const productData = {}
-        //     for(let formElementIdentifier in product) {
-        //         productData[formElementIdentifier] = product[formElementIdentifier]
-        //      }
-        //      axios.post('https://react-powerstore-alex.firebaseio.com/products.json', productData)
-        //      .then(resp => {
-        //          console.log('Products Data sent')
-        //      })
-        //      .catch(err => {
-        //          console.log('Something went wrong!')
-        //      })
-        // })
 
         setSubmitting(false)
         resetForm()

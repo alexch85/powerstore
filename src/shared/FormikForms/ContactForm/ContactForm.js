@@ -2,19 +2,17 @@ import React, { Component } from 'react'
 import styles from './ContactForm.module.css'
 
 import Modal from '../../../components/UI/Modal/Modal';
-// import Spinner from '../../../components/UI/Spinner/Spinner';
 import Button from '../../../components/UI/Button/Button';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-
-// import { connect } from 'react-redux'
 import axios from 'axios';
 import { Form , Field, withFormik } from 'formik'
 import * as yup from 'yup'
 
 class ContactForm extends Component{
+    //state for submitted message
     state={
         submitted: true
     }
@@ -38,14 +36,14 @@ class ContactForm extends Component{
               <div className={styles.ContactForm}>
               <Form>
                   <div className={styles.FieldContainer}>
-                  <Field  type="text" name="name" placeholder="Your Name"/>
+                  <Field type="text" name="name" placeholder="Your Name"/>
                   {touched.name && errors.name && <p>Name is too short</p>}
                   </div>
                   <div className={styles.FieldContainer}>
                   <Field  type="text" name="lastname" placeholder="Your Last Name" />
-                  {touched.lastname && errors.name && <p>Name is too short</p>}
+                  {touched.lastname && errors.name && <p>Lastname is too short</p>}
                   </div>
-                  <div className={styles.FieldContainer}>
+                  <div  className={styles.FieldContainer}>
                   <Field  type="email" name="email" placeholder="Your Email" />
                   {touched.email && errors.email && <p>Email is required</p>}
                   </div>
@@ -86,7 +84,6 @@ const FormikForm = withFormik({
 
     axios.post('https://react-powerstore-alex.firebaseio.com/submits.json', submitFormData)
     .then(resp => {
-        // alert(`Thanks for getting in touch`)
         setStatus({success: true})
     })
     .catch(error => {

@@ -1,44 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import styles from './AboutContact.module.css';
-import axios from 'axios';
 
 import PageTitle from '../../../components/UI/PageTitle/PageTitle';
 import ContactForm from '../../../shared/FormikForms/ContactForm/ContactForm';
 
 class AboutContact extends Component {
-    state={
-        loading: false,
-        formIsValid: false,
-        submitted: false
-    }
-    
-    componentDidMount() {
-        window.scrollTo(0, 0)
-      }
-      
-    closeModalHandler = () => {
-        this.setState({submitted: false})
-    }
-
-    submitHandler = (event) => {
-        event.preventDefault();
-        this.setState({loading: true});
-        this.setState({submitted: true});
-        const submitFormData = {};
-        for (let formElementIdentifier in this.state.submitForm){
-            submitFormData[formElementIdentifier] = this.state.submitForm[formElementIdentifier].value;
-        }
-
-        axios.post('https://react-powerstore-alex.firebaseio.com/submits.json', submitFormData)
-        .then(resp => {
-            this.setState({loading: false});
-        })
-        .catch(error => {
-            alert(`Something went wrong`)
-        })
-    }
-
-
     render() {
         return (
             <Fragment>
@@ -59,8 +25,6 @@ class AboutContact extends Component {
                 <div className={styles.Contact}>
                     <h2>LET'S GET IN TOUCH!</h2>
                     <ContactForm/>
-                    {/* {form} */}
-                    {/* {submitButton} */}
                 </div>
             </div>
             </div>

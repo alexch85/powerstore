@@ -18,17 +18,17 @@ const registerForm = ({touched, errors, isSubmitting, onClose, clicked}) => {
         <h2>Register</h2>
         <Form>
         <div className={styles.FormsContainer}>
-            <label>Email:</label>
+            <label for='email'>Email:</label>
             <Field  type="email" name="email" placeholder="Email"/>
             <div className={styles.ErrorMessage}>
             {touched.email && errors.email && <p>{errors.email}</p>}
             </div>
-            <label>Password:</label>
+            <label for='password'>Password:</label>
             <Field type="password" name="password" placeholder="Password"/>
             <div className={styles.ErrorMessage}>
             {touched.password && errors.password && <p>{errors.password}</p>}
             </div>
-            <label>Confirm password:</label>
+            <label for='confirm password'>Confirm password:</label>
             <Field type="password" name="confirmPassword" placeholder="Confirm Password"/>
             <div className={styles.ErrorMessage}>
             { touched.confirmPassword && errors.confirmPassword && <p>Passwords must match</p>}

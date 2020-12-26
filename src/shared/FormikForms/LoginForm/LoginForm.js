@@ -18,12 +18,12 @@ const loginForm = ({ touched, errors, isSubmitting, onClose, clicked }) => {
         <h2>Login</h2>
         <Form>
         <div className={styles.FormsContainer}>
-            <label>Email:</label>
+            <label for='email'>Email:</label>
             <Field  type="email" name="email" placeholder="Email"/>
             <div className={styles.ErrorMessage}>
                 {touched.email && errors.email && <p>{errors.email}</p>}
             </div>
-            <label>Password:</label>
+            <label for='password'>Password:</label>
             <Field type="password" name="password" placeholder="Password"/>
             <div className={styles.ErrorMessage}>
                 {touched.password && errors.password && <p>{errors.password}</p>}
@@ -42,17 +42,12 @@ const loginForm = ({ touched, errors, isSubmitting, onClose, clicked }) => {
         return {
             email: '',
             password: '',
-            // confirmPassword: ''
         }
     },
 
     validationSchema: yup.object().shape({
         email: yup.string().email().required(),
         password: yup.string().min(8).required()
-        // confirmPassword: yup.string().min(8).required()
-        // .test("Passwords match", "Passwords must match", function(value) {
-        //   return this.parent.password === value
-        // })
     }),
 
     handleSubmit(values, {setSubmitting, resetForm, props}) { 

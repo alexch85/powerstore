@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import * as actions from './store/actions/index';
 
 import Spinner from './components/UI/Spinner/Spinner';
+import Homepage from './containers/Pages/Hompage/Homepage';
 
 //Lazy loading
 const homePage = React.lazy(()=> import('./containers/Pages/Hompage/Homepage'))
@@ -63,7 +64,7 @@ class App extends Component {
           <Route path="/Orders" component={ordersPage}/>
           <Route path="/Logout" component={logout} />
           <Route path="/:id" component={productPage} />
-          <Route path="/" exact render={(props)=> props.loading ?<Spinner/> : homePage} />
+          <Route path="/" exact render={(props)=> props.loading ?<Spinner/> : <Homepage/>} />
           <Redirect to="/"/>
         </Switch>
         </Suspense>

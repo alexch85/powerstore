@@ -1,7 +1,7 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 
-const firebaseKey = process.env.POWERSTORE_FIREBASE_KEY;
+const firebaseKey = process.env.REACT_APP_POWERSTORE_FIREBASE_KEY;
 
 export const authStart = () => {
 	return {

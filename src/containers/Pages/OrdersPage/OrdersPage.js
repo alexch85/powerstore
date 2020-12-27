@@ -3,8 +3,6 @@ import styles from './OrderPage.module.css';
 
 import axios from 'axios';
 import { connect } from 'react-redux';
-import * as actions from '../../../store/actions/index';
-
 
 import PageTitle from '../../../components/UI/PageTitle/PageTitle';
 import Order from '../../Order/Order';
@@ -28,6 +26,7 @@ class OrdersPage extends Component {
                             id: key
                         } );
                     }
+                    //sort orders by date
                     fetchedOrders.sort(function compare(a, b) {
                         let dateA = Date.parse(a.orderDate);
                         let dateB = Date.parse(b.orderDate);
@@ -79,10 +78,4 @@ const mapsStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onTryAutoSignup: () => dispatch(actions.authCheckState())
-    }
-}
-
-export default connect(mapsStateToProps, mapDispatchToProps) (OrdersPage);
+export default connect(mapsStateToProps) (OrdersPage);

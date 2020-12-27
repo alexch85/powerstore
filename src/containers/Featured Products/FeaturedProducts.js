@@ -7,7 +7,6 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 
 const featuredProducts = (props) => {
     const productSelectedHandler = ( id ) => {
-        // history.push({pathname: '/posts/' + id});
      props.history.push( '/'+ id );
     }
         let featProducts = <Spinner/>

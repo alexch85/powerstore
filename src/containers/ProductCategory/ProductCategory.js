@@ -19,7 +19,6 @@ export class ProductCategory extends Component {
       }
  
     productSelectedHandler = ( id ) => {
-        // this.props.history.push({pathname: '/posts/' + id});
         this.props.history.push( '/'+ id );
     }
     sortHandler = (event) => {

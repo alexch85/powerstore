@@ -1,11 +1,11 @@
 .RegularButton {
     padding: 7px 12px;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 500;
-    background-color: #363636;
+    background-color: #555;
     border-radius: 2px;
     border: none;
     outline: none;
@@ -19,7 +19,7 @@
 .ActionButton {
     padding: 7px 12px;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 500;
@@ -35,6 +35,7 @@
 }
 .ActionButton:hover {
     cursor: pointer;
+    background: #018541;
 }
 
 @media (max-width: 1280px) {

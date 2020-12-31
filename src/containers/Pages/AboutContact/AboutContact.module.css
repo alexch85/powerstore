@@ -16,6 +16,8 @@
 
 .About p {
 	width: 450px;
+	font-weight: 300;
+	font-size: 1rem;
 }
 
 .About img {

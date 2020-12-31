@@ -23,7 +23,7 @@ class AboutContact extends Component {
                 </p>
                 </div>
                 <div className={styles.Contact}>
-                    <h2>LET'S GET IN TOUCH!</h2>
+                    <h2>Get in touch!</h2>
                     <ContactForm/>
                 </div>
             </div>

@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Toolbar.module.css';
 
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index';
+
 import NavigationItems from '../../components/Navigation/NavigationItems/NavigationItems';
 import Logo from '../../components/Logo/Logo';
 import DrawerToggle from '../../components/Navigation/Sidedrawer/DrawerToggle/DrawerToggle';
-import { connect } from 'react-redux';
-import * as actions from '../../store/actions/index';
-// import { Redirect } from 'react-router-dom'
 
 import Cart from '../../components/Navigation/Cart/Cart';
 import SocialMIcons from '../../components/UI/SocialMediaIcons/SocialMIcons';
@@ -67,7 +67,6 @@ class Toolbar extends Component {
 			<header>
 				<Backdrop show={this.state.dropdown} type='menu' />
 				<div className={styles.headerContainer}>
-					{/* {!this.props.isAuth ? <Redirect to="/"/>: null} */}
 					<Logo type={'nav'} />
 					<DrawerToggle clicked={this.props.drawerToggleClicked} />
 					<nav className={styles.DesktopOnly}>

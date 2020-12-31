@@ -334,7 +334,6 @@ const FormikForm = withFormik({
         city: yup.string().min(2).required(),
         state: yup.string().min(2),
         postcode: yup.number().min(2),
-        // .test(val => val.toString().length >= 5),
         country: yup.string().required(),
     }),
    

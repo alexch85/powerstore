@@ -1,5 +1,5 @@
-// export const RENDER_PRODUCTS = 'RENDER_PRODUCTS';
-export const INIT_PRODUCTS = 'INIT_PRODUCTS';
+
+//cart action types
 export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
 export const FETCH_PRODUCTS_START = 'FETCH_PRODUCTS_START';
 export const FETCH_PRODUCTS_FAIL = 'FETCH_PRODUCTS_FAIL';
@@ -17,6 +17,7 @@ export const CALC_TOTAL_WTH_DELIVERY = 'CALC_TOTAL_WTH_DELIVERY';
 export const CHANGE_DELEVERY_METHOD = 'CHANGE_DELEVERY_METHOD';
 export const RESET_DELEVERY_METHOD = 'RESET_DELEVERY_METHOD';
 
+//orders auth types
 export const AUTH_START = 'AUTH_START';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
 export const AUTH_FAIL = 'AUTH_FAIL';
@@ -27,6 +28,8 @@ export const SHOW_REGISTER = 'SHOW_REGISTER';
 export const REMOVE_ERROR= 'REMOVE_ERROR';
 export const AUTH_LOGOUT = 'AUTH_LOGOUT';
 
+
+//orders action types
 export const PLACE_ORDER_ON = 'PLACE_ORDER_ON'; 
 export const PLACE_ORDER_OFF = 'PLACE_ORDER_OFF'; 
 

@@ -7,8 +7,6 @@ import Button from '../../../components/UI/Button/Button';
 import PageTitle from '../../../components/UI/PageTitle/PageTitle';
 import QuantityCounter from '../../../components/UI/QuantityCounter/QuantityCounter';
 
-
-
 class ProductPage extends Component {
     componentWillUnmount(){
         this.props.onresetCounter()

@@ -18,12 +18,12 @@ const loginForm = ({ touched, errors, isSubmitting, onClose, clicked }) => {
         <h2>Login</h2>
         <Form>
         <div className={styles.FormsContainer}>
-            <label for='email'>Email:</label>
+            <label>Email:</label>
             <Field  type="email" name="email" placeholder="Email"/>
             <div className={styles.ErrorMessage}>
                 {touched.email && errors.email && <p>{errors.email}</p>}
             </div>
-            <label for='password'>Password:</label>
+            <label >Password:</label>
             <Field type="password" name="password" placeholder="Password"/>
             <div className={styles.ErrorMessage}>
                 {touched.password && errors.password && <p>{errors.password}</p>}

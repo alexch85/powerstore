@@ -23,8 +23,6 @@ const initialState = {
     totalItemQty: 0,
 
     loading: false
-
-
 };
 
 const reducer = ( state = initialState, action ) => {
@@ -40,7 +38,6 @@ const reducer = ( state = initialState, action ) => {
                 loading: false
             } 
         case actionTypes.FETCH_PRODUCTS_SUCCESS:
-
             return {
                 ...state,
                 products: action.products,
@@ -175,9 +172,6 @@ const reducer = ( state = initialState, action ) => {
             case actionTypes.CHANGE_DELEVERY_METHOD: 
             const selectedMethod = state.deliveryMethods.filter(method => method.method === action.id)
             const updatedMethod = selectedMethod[0]
-            // let selectedMethod = '';
-            // state.deliveryMethods.filter(method => method.method == action.id).forEach(method => {
-            //   selectedMethod = method;
             return {
                 ...state,
                 delivery: updatedMethod

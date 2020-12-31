@@ -1,5 +1,5 @@
 header {
-	height: 75px;
+	height: 62px;
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
@@ -103,12 +103,7 @@ button a {
 	header {
 		padding: 0;
 	}
-	/* nav {
-        display: none;
-    } */
-	header {
-		height: 60px;
-	}
+	
 	.headerContainer {
 		display: flex;
 		flex-flow: row nowrap;

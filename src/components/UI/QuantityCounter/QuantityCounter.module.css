@@ -13,6 +13,10 @@
     border: none;
     outline: none;
     padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 5px;
 }
 
 .QuantityCounter button:hover {
@@ -22,6 +26,9 @@
 
 .QuantityNum {
     min-width: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-weight: bold;
     border: 1px solid #cccccc;

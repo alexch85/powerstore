@@ -153,6 +153,12 @@
     }
     
 }
+
+@media (max-width: 768px) {
+    .CartItem {
+        font-size: 0.6rem;
+    }
+}
 @keyframes fade-out {
     from {
         opacity:1;

@@ -18,14 +18,19 @@ import OrdersReducer from './store/reducers/orders';
 
 import * as serviceWorker from './serviceWorker';
 
+
+//redux development tools
 const composeEnhancers = (process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null) || compose;
 
+
+//Using multiple reducers
 const rootReducer = combineReducers({
    CartManage : CartManageReducer,
    auth: AuthReducer,
    orders: OrdersReducer
 })
 
+//Persisting state
 const persistConfig = {
   key: 'root',
   storage,

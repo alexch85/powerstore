@@ -35,24 +35,25 @@
 }
 
 .ProdContainer p {
-	size: 1rem;
+	size: 0.9rem;
 	margin: 0;
-	max-width: 140px;
+	max-width: 100%;
 	font-weight: 500;
 }
 
 .FeaturedProdContainer p {
 	size: 0.9rem;
 	margin: 0;
-	max-width: 140px;
+	max-width: 100%;
 	font-weight: 500;
 }
 
 .TextContainer {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 5px;
+	padding:  5px;
 }
 
 .Price {
@@ -60,6 +61,7 @@
 	font-weight: bold;
 	font-size: 1.2em;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5px;
 }
 
 .HoverFocus {

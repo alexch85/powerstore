@@ -1,55 +1,54 @@
 .SideDrawer {
-    position: fixed;
-    width: 60%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 200;
-    background-color: white;
-    box-sizing: border-box;
-    transition: transform 0.7s ease-out;
-    text-align: center;
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background-color: white;
+  box-sizing: border-box;
+  transition: transform 0.7s ease-out;
+  text-align: center;
 }
 
 .CloseIcon {
-    font-size: 1.5em;
-    margin-top: 35px;
-    color: #363636;
+  font-size: 1.5em;
+  margin-top: 35px;
+  color: #363636;
+  cursor: pointer;
 }
 
 .CloseIcon:active {
-    animation: rotate-center 0.5s ease-in-out both;
+  animation: rotate-center 0.5s ease-in-out both;
 }
 
 @media (min-width: 1280px) {
-    .SideDrawer {
-        display: none;
-    }
+  .SideDrawer {
+    display: none;
+  }
 }
 
 .Open {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 .Close {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 @media (min-width: 768px) {
-    .SideDrawer {
-        width: 33%;
-    }
+  .SideDrawer {
+    width: 33%;
+  }
 }
 
 @keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
   }
-
-  
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

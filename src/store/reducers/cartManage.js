@@ -2,7 +2,7 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
   products: null,
-
+  // Available delivery methods
   deliveryMethods: [
     {
       method: 'flat rate shipping',
@@ -82,8 +82,10 @@ const reducer = (state = initialState, action) => {
       let addedItem = state.products.find(
         (product) => product.name === action.id,
       );
+      //Checks if product exsit in cart already
       let exsitedItem = state.cart.find((item) => item.name === action.id);
-      //PRODUCT PAGE EXISTING MULTIPLE ITEMS ADD
+
+      //Exsiting item Multiple add  (from product page)
       if (exsitedItem && state.productPageQty >= 1) {
         exsitedItem.qty = exsitedItem.qty + state.productPageQty;
         let totalAddedPrice = parseFloat(
@@ -103,7 +105,7 @@ const reducer = (state = initialState, action) => {
           total: newTotal,
         };
       }
-      //SINGLE NON-PRODUCT PAGE EXISTING ITEM ADD
+      //Exsiting item single add (not from product page)
       if (exsitedItem) {
         addedItem.qty++;
         addedItem.totalAddedPrice = parseFloat(
@@ -114,7 +116,7 @@ const reducer = (state = initialState, action) => {
           total: state.total + addedItem.price,
         };
       }
-      //PRODUCT PAGE ADD
+      //Mutliple item add to cart (from product page)
       if (state.productPageQty >= 1) {
         const productNum = state.productPageQty;
         addedItem.totalAddedPrice = parseFloat(
@@ -130,7 +132,7 @@ const reducer = (state = initialState, action) => {
           total: newTotal,
         };
       }
-      // NON EXISTING NON-PRODUCT PAGE ITEM
+      // Not Existing item in cart add (not from product page)
       if (!exsitedItem) {
         addedItem.qty = 1;
         addedItem.totalAddedPrice = parseFloat(addedItem.price.toFixed(2));
@@ -143,6 +145,7 @@ const reducer = (state = initialState, action) => {
       }
       break;
 
+    //Add random quantity of the same item to cart
     case actionTypes.ADD_QUANTITY:
       let item = state.cart.find((product) => product.name === action.id);
       item.qty++;
@@ -155,6 +158,7 @@ const reducer = (state = initialState, action) => {
         total: updatedTotal,
       };
 
+    //Remove random quantity of the same item from cart
     case actionTypes.REMOVE_QUANTITY:
       let cartItem = state.cart.find((product) => product.name === action.id);
       if (cartItem.qty === 1) {
@@ -186,6 +190,7 @@ const reducer = (state = initialState, action) => {
         };
       }
 
+    //Increment item quantity in cart
     case actionTypes.INCREMENT_QUANTITY:
       let updateditemQty = state.productPageQty;
       updateditemQty++;
@@ -194,6 +199,7 @@ const reducer = (state = initialState, action) => {
         productPageQty: updateditemQty,
       };
 
+    //Decrement item quantity in cart
     case actionTypes.DECREMENT_QUANTITY:
       let updatedProductQty = state.productPageQty;
       if (updatedProductQty > 1) {
@@ -204,11 +210,14 @@ const reducer = (state = initialState, action) => {
         productPageQty: updatedProductQty,
       };
 
+    //Reset the quantity counter
     case actionTypes.RESET_COUNTER:
       return {
         ...state,
         productPageQty: 1,
       };
+
+    //Calculate total items quantity in cart
     case actionTypes.CALC_TOTAL_ITEM_QTY:
       const totalItemQty = state.cart.reduce(function (prev, cur) {
         return prev + cur.qty;
@@ -218,7 +227,7 @@ const reducer = (state = initialState, action) => {
         totalItemQty: totalItemQty,
       };
 
-    case actionTypes.CHANGE_DELEVERY_METHOD:
+    case actionTypes.CHANGE_DELIVERY_METHOD:
       const selectedMethod = state.deliveryMethods.filter(
         (method) => method.method === action.id,
       );
@@ -228,6 +237,7 @@ const reducer = (state = initialState, action) => {
         delivery: updatedMethod,
       };
 
+    //Calculate total with delivery sum
     case actionTypes.CALC_TOTAL_WTH_DELIVERY:
       let newTotalWithDelivery = '';
       if (state.cart.length > 0) {
@@ -240,7 +250,8 @@ const reducer = (state = initialState, action) => {
         totalWithDelivery: newTotalWithDelivery,
       };
 
-    case actionTypes.RESET_DELEVERY_METHOD:
+    //Reset delivery method
+    case actionTypes.RESET_DELIVERY_METHOD:
       return {
         ...state,
         delivery: {
@@ -250,6 +261,7 @@ const reducer = (state = initialState, action) => {
         },
       };
 
+    //Reset cart
     case actionTypes.RESET_CART:
       return {
         ...state,

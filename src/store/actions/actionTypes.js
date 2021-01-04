@@ -1,23 +1,22 @@
-
-//cart action types
+//Cart action types
 export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
 export const FETCH_PRODUCTS_START = 'FETCH_PRODUCTS_START';
 export const FETCH_PRODUCTS_FAIL = 'FETCH_PRODUCTS_FAIL';
 
 export const ADD_TO_CART = 'ADD_TO_CART';
-export const RESET_CART = 'RESET_CART'
+export const RESET_CART = 'RESET_CART';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 export const ADD_QUANTITY = 'ADD_QUANTITY';
 export const REMOVE_QUANTITY = 'REMOVE_QUANTITY';
 export const INCREMENT_QUANTITY = 'INCREMENT_QUANTITY';
 export const DECREMENT_QUANTITY = 'DECREMENT_QUANTITY';
 export const RESET_COUNTER = 'RESET_COUNTER';
-export const CALC_TOTAL_ITEM_QTY = 'CALC_TOTAL_ITEM_QTY'; 
+export const CALC_TOTAL_ITEM_QTY = 'CALC_TOTAL_ITEM_QTY';
 export const CALC_TOTAL_WTH_DELIVERY = 'CALC_TOTAL_WTH_DELIVERY';
-export const CHANGE_DELEVERY_METHOD = 'CHANGE_DELEVERY_METHOD';
-export const RESET_DELEVERY_METHOD = 'RESET_DELEVERY_METHOD';
+export const CHANGE_DELIVERY_METHOD = 'CHANGE_DELIVERY_METHOD';
+export const RESET_DELIVERY_METHOD = 'RESET_DELIVERY_METHOD';
 
-//orders auth types
+//Orders auth types
 export const AUTH_START = 'AUTH_START';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
 export const AUTH_FAIL = 'AUTH_FAIL';
@@ -25,12 +24,9 @@ export const SWITCH_MODE = 'SWITCH_MODE';
 export const SHOW_LOGIN = 'SHOW_LOGIN';
 export const CLOSE_LOGIN = 'CLOSE_LOGIN';
 export const SHOW_REGISTER = 'SHOW_REGISTER';
-export const REMOVE_ERROR= 'REMOVE_ERROR';
+export const REMOVE_ERROR = 'REMOVE_ERROR';
 export const AUTH_LOGOUT = 'AUTH_LOGOUT';
 
-
-//orders action types
-export const PLACE_ORDER_ON = 'PLACE_ORDER_ON'; 
-export const PLACE_ORDER_OFF = 'PLACE_ORDER_OFF'; 
-
-
+//Orders action types
+export const PLACE_ORDER_ON = 'PLACE_ORDER_ON';
+export const PLACE_ORDER_OFF = 'PLACE_ORDER_OFF';
